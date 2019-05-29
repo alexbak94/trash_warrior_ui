@@ -2,6 +2,7 @@ export interface IPlace {
     label: string;
     address: string;
     position: IPosition;
+    img?: string;
 }
 
 export interface IPosition {
@@ -14,11 +15,12 @@ export const deserializePlace = (serverPlace: any) => {
     if (!serverPlace) {
         return undefined;
     }
-    const {label, address, position} = serverPlace;
+    const {label, address, position, img} = serverPlace;
      return {
          label,
          address,
          position: deserializePosition(position),
+         img,
      };
 };
 

@@ -11,6 +11,7 @@ import {pages} from './landing.constants';
 import {NotFound} from '../../components/notFound';
 import {RootRoutes} from '../../router/routes';
 import {compose} from 'redux';
+import {NavLink} from 'react-router-dom';
 
 export interface ILandingState {
 }
@@ -19,17 +20,12 @@ export class Landing extends React.Component<ILandingProps, ILandingState> {
 
     public render() {
         return (
-            <div>
+            <div className={'w-100 h-100'}>
                 <main
-                    className={'landing'}
-                    id="landingNavbar"
-                    data-spy="scroll"
-                    data-target=".navbar"
-                    data-offset="60"
+                    className={'landing w-100 h-100'}
                 >
-                    <Jumbotron className={'text-center'} fluid>
-                        <NavbarBrand href="/">
-                            <Container fluid>
+                    <div className={'text-center header'}>
+                        <NavLink to={RootRoutes.HOME} className={'header-logo-section'}>
                                 <img
                                     className={'header-logo'}
                                     alt={''}
@@ -38,15 +34,14 @@ export class Landing extends React.Component<ILandingProps, ILandingState> {
                                 <h2>
                                     <Translate value={'iam'}/>
                                 </h2>
-                            </Container>
-                        </NavbarBrand>
+                        </NavLink>
                         <MainMenu/>
-                        <Switch>
-                            <Redirect exact from={RootRoutes.ROOT} to={RootRoutes.HOME}/>
-                            {pages.map(this.renderPageRoute)}
-                            <Route component={NotFound}/>
-                        </Switch>
-                    </Jumbotron>
+                    </div>
+                    <Switch>
+                        <Redirect exact from={RootRoutes.ROOT} to={RootRoutes.HOME}/>
+                        {pages.map(this.renderPageRoute)}
+                        <Route component={NotFound}/>
+                    </Switch>
                 </main>
             </div>
         );

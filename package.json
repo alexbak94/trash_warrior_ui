@@ -1,5 +1,5 @@
 {
-  "name": "trash-warrior-ui",
+  "name": "trash_warrior_ui",
   "version": "1.0.0",
   "description": "Trash Warrior",
   "main": "index.js",
@@ -36,8 +36,7 @@
     "@babel/core": "7.4.0",
     "@babel/preset-env": "7.4.2",
     "@babel/preset-react": "7.0.0",
-    "@types/google-maps-react": "^2.0.1",
-    "@types/googlemaps": "^3.36.2",
+    "@types/googlemaps": "3.36.2",
     "@types/history": "4.7.2",
     "@types/html-webpack-plugin": "3.2.0",
     "@types/jest": "24.0.11",

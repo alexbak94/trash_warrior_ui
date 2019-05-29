@@ -7,36 +7,47 @@ import Collapse from 'reactstrap/lib/Collapse';
 import {NavLink} from 'react-router-dom';
 import {pages} from '../landing.constants';
 import {IPage} from '../landing.interface';
+import Nav from 'reactstrap/lib/Nav';
+import NavbarToggler from 'reactstrap/lib/NavbarToggler';
+import {RootRoutes} from '../../../router/routes';
 
 export interface IMainMenuProps extends RouteComponentProps<{}>{
 }
 
-export class MainMenu extends React.Component<IMainMenuProps> {
+export class MainMenu extends React.Component<IMainMenuProps, {isOpen: boolean}> {
+
+    public state = {
+        isOpen: false,
+    };
+
+    private toggle = () => {
+        this.setState(state => ({isOpen: !state.isOpen}));
+    };
 
     public render() {
         return (
-            <Navbar
-                light
-                expand="md"
-                className={'text-center'}
-            >
+            <Navbar color="transperent" light expand={'lg'}>
+                <NavbarToggler onClick={this.toggle} className={'mr-2 ml-auto'}/>
                 <Collapse
-                    isOpen
-                    navbar
+                    isOpen={this.state.isOpen}
                     className={'d-flex align-items-center justify-content-center'}
+                    navbar
                 >
-                    <div className={'d-flex align-items-center justify-content-center flex-wrap'}>
-                        {pages.map(this.renderMenuItem)}
-                    </div>
+                    <Nav navbar>
+                        <div className={'d-flex align-items-center justify-content-center flex-wrap bg-white'}>
+                            {pages.map(this.renderMenuItem)}
+                           {this.renderMenuItem({titleCode: 'dashboard', route: RootRoutes.DASHBOARD}, pages.length)}
+                        </div>
+                    </Nav>
                 </Collapse>
             </Navbar>
         );
     }
 
-    private renderMenuItem = ({titleCode, route}: IPage, index: number) => {
+    private renderMenuItem = ({titleCode, route}: Partial<IPage>, index: number) => {
         return (
             <NavLink
-                style={{padding: '20px', fontSize: '14px', font: 'Avenir, sans serif'}}
+                style={{padding: '20px', fontSize: '14px', font: 'Avenir, sans serif', color: '#000', fontWeight: 400}}
                 key={index}
                 to={route}
                 activeStyle={{textDecoration: 'underline'}}

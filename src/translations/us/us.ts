@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 export const us = {
     pageNotFound: 'Page not found',
     iam: 'trash warrior',
@@ -7,7 +5,7 @@ export const us = {
     bookNow: 'Book Now',
     cleaningReports: 'Cleaning Reports',
     becomeWarrior: 'Become a Warrior',
-    faq: 'FAQs',
+    faqs: 'FAQs',
     homePage: {
         description:
             'On-demand waste management and public space cleaning.\n' +
