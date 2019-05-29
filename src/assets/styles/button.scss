@@ -1,0 +1,40 @@
+.button {
+  border: 0;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+  opacity: 1;
+  padding: 10px 15px;
+  cursor: pointer;
+  min-width: 100px;
+  user-select: none;
+  font-size: 10px;
+  font-family: Arial,Helvetica,sans-serif;
+  &--active,
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 0, 0, 1);
+  }
+  &--disabled {
+    background:  rgb(0, 0, 0);
+    cursor: initial;
+    opacity: 0.8;
+    &:hover {
+      background: rgb(0, 0, 0);
+    }
+  }
+  &--secondary {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border: 1px solid rgba(0, 0, 0, 1);
+    &--active,
+    &:hover {
+      background-color: rgba(0, 0, 0, 1);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  &--rounded {
+    border-radius: 100px;
+  }
+}

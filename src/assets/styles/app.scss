@@ -1,0 +1,34 @@
+@import 'homepage';
+@import 'button';
+
+.landing {
+
+}
+.landing-map-container {
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.header-logo {
+  margin: 17px 0 10px;
+}
+.jumbotron {
+  background-color: inherit;
+  h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  margin-bottom: 0;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}

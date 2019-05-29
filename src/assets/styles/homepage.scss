@@ -1,0 +1,62 @@
+@import 'variables';
+
+.home-page {
+  h1 {
+    font-size: 32px;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    margin: 61px 0 26px;
+  }
+
+  p > span {
+    text-align: center;
+    font: normal normal normal 16px/1.67em Avenir, sans-serif;
+    color: #000000;
+    margin: 0 10% 62px;
+  }
+
+
+  @media (min-width: $tablet) {
+    h1 {
+      font-size: 38px;
+      line-height: 1.25em;
+      text-transform: uppercase;
+    }
+    p > span {
+      text-align: center;
+      font: normal normal normal 18px/1.67em Avenir, sans-serif;
+      color: #000000;
+      margin: 0 10% 62px;
+    }
+
+  }
+
+  @media (min-width: $desktop) {
+    h1 {
+      font-size: 64px;
+      line-height: 1.25em;
+      text-transform: uppercase;
+    }
+    p > span {
+      text-align: center;
+      font: normal normal normal 20px/1.67em Avenir, sans-serif;
+      color: #000000;
+      margin: 0 10% 62px;
+    }
+
+  }
+  @media (min-width: $hd) {
+    h1 {
+      font-size: 72px;
+      line-height: 1.25em;
+      text-transform: uppercase;
+    }
+    p > span {
+      text-align: center;
+      font: normal normal normal 20px/1.67em Avenir, sans-serif;
+      color: #000000;
+      margin: 0 10% 62px;
+    }
+
+  }
+}

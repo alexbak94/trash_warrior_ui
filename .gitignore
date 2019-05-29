@@ -1,0 +1,9 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# misc
+.idea/
+.DS_Store
+node_modules
+.vscode
+dist/
+**/dist/*

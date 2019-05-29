@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "target": "es5",
+    "lib": [
+      "es5",
+      "es6",
+      "es2017",
+      "dom"
+    ],
+    "module": "commonjs",
+    "outDir": "dist",
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*.test.ts"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "typeRoots": [
+    "./node_modules/@types",
+    "./typings"
+  ]
+}
